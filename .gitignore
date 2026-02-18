@@ -1,0 +1,13 @@
+.env
+*.csv
+__pycache__/
+*.pyc
+.DS_Store
+# 1. 测试 Reddit 搜索
+python lead_hunter.py search "indie hacker" --platforms reddit --limit 10
+
+# 2. 检查 CSV 输出
+cat leads.csv | head -5
+
+# 3. 验证联系方式提取
+grep -E "@|linkedin|\.com" leads.csv
